@@ -129,7 +129,7 @@ $googleFaq = [
             <ol>
                 <li>
                     La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                        <ol>
+                        <ol type='a'>
                             <li>
                                 Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                             </li>
@@ -198,6 +198,36 @@ $googleFaq = [
 </head>
 
 <body>
+
+<div id="faqContainer">
+    <?php 
+        foreach($googleFaq as $singleFaq){
+            foreach($singleFaq as $element){
+                echo $element;
+            }
+        }
+    ?>
+</div>
     
 </body>
 </html>
+
+<style>
+
+    h2{
+        margin-top: 50px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    #faqContainer{
+        width: 70%;
+        margin: auto;
+    }
+
+    li{
+        margin-top: 10px;
+    }
+</style>
